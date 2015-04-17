@@ -1,0 +1,459 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		86EAEB161ADCBA2900E354E3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EAEB151ADCBA2900E354E3 /* main.m */; };
+		86EAEB191ADCBA2900E354E3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EAEB181ADCBA2900E354E3 /* AppDelegate.m */; };
+		86EAEB1C1ADCBA2900E354E3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EAEB1B1ADCBA2900E354E3 /* ViewController.m */; };
+		86EAEB1F1ADCBA2900E354E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86EAEB1D1ADCBA2900E354E3 /* Main.storyboard */; };
+		86EAEB211ADCBA2900E354E3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86EAEB201ADCBA2900E354E3 /* Images.xcassets */; };
+		86EAEB241ADCBA2900E354E3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86EAEB221ADCBA2900E354E3 /* LaunchScreen.xib */; };
+		86EAEB301ADCBA2900E354E3 /* TessOCRTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EAEB2F1ADCBA2900E354E3 /* TessOCRTests.m */; };
+		86ECB5D71ADD0BB100770459 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86ECB5D61ADD0BB100770459 /* CoreImage.framework */; };
+		86ECB5D91ADD0BC300770459 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 86ECB5D81ADD0BC300770459 /* libstdc++.dylib */; };
+		86ECB5DB1ADD0C1F00770459 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86ECB5DA1ADD0C1F00770459 /* TesseractOCR.framework */; };
+		86ECB5DD1ADD0C4000770459 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 86ECB5DC1ADD0C4000770459 /* tessdata */; };
+		86ECB5DE1ADD0C4000770459 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 86ECB5DC1ADD0C4000770459 /* tessdata */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		86EAEB2A1ADCBA2900E354E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 86EAEB081ADCBA2800E354E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 86EAEB0F1ADCBA2900E354E3;
+			remoteInfo = TessOCR;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		86EAEB101ADCBA2900E354E3 /* TessOCR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TessOCR.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		86EAEB141ADCBA2900E354E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86EAEB151ADCBA2900E354E3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		86EAEB171ADCBA2900E354E3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		86EAEB181ADCBA2900E354E3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		86EAEB1A1ADCBA2900E354E3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		86EAEB1B1ADCBA2900E354E3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		86EAEB1E1ADCBA2900E354E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		86EAEB201ADCBA2900E354E3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		86EAEB231ADCBA2900E354E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		86EAEB291ADCBA2900E354E3 /* TessOCRTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TessOCRTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		86EAEB2E1ADCBA2900E354E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		86EAEB2F1ADCBA2900E354E3 /* TessOCRTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TessOCRTests.m; sourceTree = "<group>"; };
+		86ECB5D61ADD0BB100770459 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		86ECB5D81ADD0BC300770459 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
+		86ECB5DA1ADD0C1F00770459 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = "TessOCR/Tesseract Resources/TesseractOCR.framework"; sourceTree = "<group>"; };
+		86ECB5DC1ADD0C4000770459 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = "Tesseract Resources/tessdata"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		86EAEB0D1ADCBA2900E354E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86ECB5DB1ADD0C1F00770459 /* TesseractOCR.framework in Frameworks */,
+				86ECB5D91ADD0BC300770459 /* libstdc++.dylib in Frameworks */,
+				86ECB5D71ADD0BB100770459 /* CoreImage.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86EAEB261ADCBA2900E354E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		86EAEB071ADCBA2800E354E3 = {
+			isa = PBXGroup;
+			children = (
+				86ECB5DA1ADD0C1F00770459 /* TesseractOCR.framework */,
+				86ECB5D81ADD0BC300770459 /* libstdc++.dylib */,
+				86ECB5D61ADD0BB100770459 /* CoreImage.framework */,
+				86EAEB121ADCBA2900E354E3 /* TessOCR */,
+				86EAEB2C1ADCBA2900E354E3 /* TessOCRTests */,
+				86EAEB111ADCBA2900E354E3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		86EAEB111ADCBA2900E354E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				86EAEB101ADCBA2900E354E3 /* TessOCR.app */,
+				86EAEB291ADCBA2900E354E3 /* TessOCRTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		86EAEB121ADCBA2900E354E3 /* TessOCR */ = {
+			isa = PBXGroup;
+			children = (
+				86ECB5DC1ADD0C4000770459 /* tessdata */,
+				86EAEB171ADCBA2900E354E3 /* AppDelegate.h */,
+				86EAEB181ADCBA2900E354E3 /* AppDelegate.m */,
+				86EAEB1A1ADCBA2900E354E3 /* ViewController.h */,
+				86EAEB1B1ADCBA2900E354E3 /* ViewController.m */,
+				86EAEB1D1ADCBA2900E354E3 /* Main.storyboard */,
+				86EAEB201ADCBA2900E354E3 /* Images.xcassets */,
+				86EAEB221ADCBA2900E354E3 /* LaunchScreen.xib */,
+				86EAEB131ADCBA2900E354E3 /* Supporting Files */,
+			);
+			path = TessOCR;
+			sourceTree = "<group>";
+		};
+		86EAEB131ADCBA2900E354E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				86EAEB141ADCBA2900E354E3 /* Info.plist */,
+				86EAEB151ADCBA2900E354E3 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		86EAEB2C1ADCBA2900E354E3 /* TessOCRTests */ = {
+			isa = PBXGroup;
+			children = (
+				86EAEB2F1ADCBA2900E354E3 /* TessOCRTests.m */,
+				86EAEB2D1ADCBA2900E354E3 /* Supporting Files */,
+			);
+			path = TessOCRTests;
+			sourceTree = "<group>";
+		};
+		86EAEB2D1ADCBA2900E354E3 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				86EAEB2E1ADCBA2900E354E3 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		86EAEB0F1ADCBA2900E354E3 /* TessOCR */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86EAEB331ADCBA2900E354E3 /* Build configuration list for PBXNativeTarget "TessOCR" */;
+			buildPhases = (
+				86EAEB0C1ADCBA2900E354E3 /* Sources */,
+				86EAEB0D1ADCBA2900E354E3 /* Frameworks */,
+				86EAEB0E1ADCBA2900E354E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TessOCR;
+			productName = TessOCR;
+			productReference = 86EAEB101ADCBA2900E354E3 /* TessOCR.app */;
+			productType = "com.apple.product-type.application";
+		};
+		86EAEB281ADCBA2900E354E3 /* TessOCRTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 86EAEB361ADCBA2900E354E3 /* Build configuration list for PBXNativeTarget "TessOCRTests" */;
+			buildPhases = (
+				86EAEB251ADCBA2900E354E3 /* Sources */,
+				86EAEB261ADCBA2900E354E3 /* Frameworks */,
+				86EAEB271ADCBA2900E354E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				86EAEB2B1ADCBA2900E354E3 /* PBXTargetDependency */,
+			);
+			name = TessOCRTests;
+			productName = TessOCRTests;
+			productReference = 86EAEB291ADCBA2900E354E3 /* TessOCRTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		86EAEB081ADCBA2800E354E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Arafat Hossain";
+				TargetAttributes = {
+					86EAEB0F1ADCBA2900E354E3 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+					86EAEB281ADCBA2900E354E3 = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 86EAEB0F1ADCBA2900E354E3;
+					};
+				};
+			};
+			buildConfigurationList = 86EAEB0B1ADCBA2800E354E3 /* Build configuration list for PBXProject "TessOCR" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 86EAEB071ADCBA2800E354E3;
+			productRefGroup = 86EAEB111ADCBA2900E354E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				86EAEB0F1ADCBA2900E354E3 /* TessOCR */,
+				86EAEB281ADCBA2900E354E3 /* TessOCRTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		86EAEB0E1ADCBA2900E354E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86EAEB1F1ADCBA2900E354E3 /* Main.storyboard in Resources */,
+				86ECB5DD1ADD0C4000770459 /* tessdata in Resources */,
+				86EAEB241ADCBA2900E354E3 /* LaunchScreen.xib in Resources */,
+				86EAEB211ADCBA2900E354E3 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86EAEB271ADCBA2900E354E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86ECB5DE1ADD0C4000770459 /* tessdata in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		86EAEB0C1ADCBA2900E354E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86EAEB1C1ADCBA2900E354E3 /* ViewController.m in Sources */,
+				86EAEB191ADCBA2900E354E3 /* AppDelegate.m in Sources */,
+				86EAEB161ADCBA2900E354E3 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		86EAEB251ADCBA2900E354E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86EAEB301ADCBA2900E354E3 /* TessOCRTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		86EAEB2B1ADCBA2900E354E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 86EAEB0F1ADCBA2900E354E3 /* TessOCR */;
+			targetProxy = 86EAEB2A1ADCBA2900E354E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		86EAEB1D1ADCBA2900E354E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86EAEB1E1ADCBA2900E354E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		86EAEB221ADCBA2900E354E3 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				86EAEB231ADCBA2900E354E3 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		86EAEB311ADCBA2900E354E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		86EAEB321ADCBA2900E354E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		86EAEB341ADCBA2900E354E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TessOCR/Tesseract",
+					Resources,
+				);
+				INFOPLIST_FILE = TessOCR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		86EAEB351ADCBA2900E354E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/TessOCR/Tesseract",
+					Resources,
+				);
+				INFOPLIST_FILE = TessOCR/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		86EAEB371ADCBA2900E354E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TessOCRTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TessOCR.app/TessOCR";
+			};
+			name = Debug;
+		};
+		86EAEB381ADCBA2900E354E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = TessOCRTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TessOCR.app/TessOCR";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		86EAEB0B1ADCBA2800E354E3 /* Build configuration list for PBXProject "TessOCR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86EAEB311ADCBA2900E354E3 /* Debug */,
+				86EAEB321ADCBA2900E354E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86EAEB331ADCBA2900E354E3 /* Build configuration list for PBXNativeTarget "TessOCR" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86EAEB341ADCBA2900E354E3 /* Debug */,
+				86EAEB351ADCBA2900E354E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		86EAEB361ADCBA2900E354E3 /* Build configuration list for PBXNativeTarget "TessOCRTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				86EAEB371ADCBA2900E354E3 /* Debug */,
+				86EAEB381ADCBA2900E354E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 86EAEB081ADCBA2800E354E3 /* Project object */;
+}
