@@ -16,9 +16,9 @@
 		86EAEB301ADCBA2900E354E3 /* TessOCRTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 86EAEB2F1ADCBA2900E354E3 /* TessOCRTests.m */; };
 		86ECB5D71ADD0BB100770459 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86ECB5D61ADD0BB100770459 /* CoreImage.framework */; };
 		86ECB5D91ADD0BC300770459 /* libstdc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 86ECB5D81ADD0BC300770459 /* libstdc++.dylib */; };
-		86ECB5DB1ADD0C1F00770459 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86ECB5DA1ADD0C1F00770459 /* TesseractOCR.framework */; };
 		86ECB5DD1ADD0C4000770459 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 86ECB5DC1ADD0C4000770459 /* tessdata */; };
 		86ECB5DE1ADD0C4000770459 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 86ECB5DC1ADD0C4000770459 /* tessdata */; };
+		FADC824E1AE2300F00D6D6DB /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86ECB5DA1ADD0C1F00770459 /* TesseractOCR.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +47,7 @@
 		86EAEB2F1ADCBA2900E354E3 /* TessOCRTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TessOCRTests.m; sourceTree = "<group>"; };
 		86ECB5D61ADD0BB100770459 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		86ECB5D81ADD0BC300770459 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
-		86ECB5DA1ADD0C1F00770459 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = "TessOCR/Tesseract Resources/TesseractOCR.framework"; sourceTree = "<group>"; };
+		86ECB5DA1ADD0C1F00770459 /* TesseractOCR.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TesseractOCR.framework; path = "Tesseract Resources/TesseractOCR.framework"; sourceTree = "<group>"; };
 		86ECB5DC1ADD0C4000770459 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; name = tessdata; path = "Tesseract Resources/tessdata"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				86ECB5DB1ADD0C1F00770459 /* TesseractOCR.framework in Frameworks */,
+				FADC824E1AE2300F00D6D6DB /* TesseractOCR.framework in Frameworks */,
 				86ECB5D91ADD0BC300770459 /* libstdc++.dylib in Frameworks */,
 				86ECB5D71ADD0BB100770459 /* CoreImage.framework in Frameworks */,
 			);
@@ -75,9 +75,6 @@
 		86EAEB071ADCBA2800E354E3 = {
 			isa = PBXGroup;
 			children = (
-				86ECB5DA1ADD0C1F00770459 /* TesseractOCR.framework */,
-				86ECB5D81ADD0BC300770459 /* libstdc++.dylib */,
-				86ECB5D61ADD0BB100770459 /* CoreImage.framework */,
 				86EAEB121ADCBA2900E354E3 /* TessOCR */,
 				86EAEB2C1ADCBA2900E354E3 /* TessOCRTests */,
 				86EAEB111ADCBA2900E354E3 /* Products */,
@@ -96,14 +93,10 @@
 		86EAEB121ADCBA2900E354E3 /* TessOCR */ = {
 			isa = PBXGroup;
 			children = (
-				86ECB5DC1ADD0C4000770459 /* tessdata */,
 				86EAEB171ADCBA2900E354E3 /* AppDelegate.h */,
 				86EAEB181ADCBA2900E354E3 /* AppDelegate.m */,
 				86EAEB1A1ADCBA2900E354E3 /* ViewController.h */,
 				86EAEB1B1ADCBA2900E354E3 /* ViewController.m */,
-				86EAEB1D1ADCBA2900E354E3 /* Main.storyboard */,
-				86EAEB201ADCBA2900E354E3 /* Images.xcassets */,
-				86EAEB221ADCBA2900E354E3 /* LaunchScreen.xib */,
 				86EAEB131ADCBA2900E354E3 /* Supporting Files */,
 			);
 			path = TessOCR;
@@ -112,6 +105,13 @@
 		86EAEB131ADCBA2900E354E3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				86ECB5DA1ADD0C1F00770459 /* TesseractOCR.framework */,
+				86ECB5D81ADD0BC300770459 /* libstdc++.dylib */,
+				86ECB5D61ADD0BB100770459 /* CoreImage.framework */,
+				86EAEB1D1ADCBA2900E354E3 /* Main.storyboard */,
+				86EAEB201ADCBA2900E354E3 /* Images.xcassets */,
+				86EAEB221ADCBA2900E354E3 /* LaunchScreen.xib */,
+				86ECB5DC1ADD0C4000770459 /* tessdata */,
 				86EAEB141ADCBA2900E354E3 /* Info.plist */,
 				86EAEB151ADCBA2900E354E3 /* main.m */,
 			);
@@ -367,6 +367,8 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/TessOCR/Tesseract",
 					Resources,
+					"$(PROJECT_DIR)/TessOCR/Tesseract",
+					Resources,
 				);
 				INFOPLIST_FILE = TessOCR/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -380,6 +382,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/TessOCR/Tesseract",
+					Resources,
 					"$(PROJECT_DIR)/TessOCR/Tesseract",
 					Resources,
 				);

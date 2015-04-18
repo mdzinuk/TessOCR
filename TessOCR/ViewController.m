@@ -10,44 +10,49 @@
 #import <TesseractOCR/TesseractOCR.h>
 
 
-@interface ViewController ()<UIActionSheetDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate,UITextViewDelegate>
+@interface ViewController ()<UIActionSheetDelegate,UIImagePickerControllerDelegate,UITextViewDelegate>
 @property (nonatomic, strong) UIImagePickerController *imagePickerController;
 @property (weak, nonatomic) IBOutlet UITextView *textView;
-@property (nonatomic, strong) UIImage *capturedImage;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityView;
+@property (strong, nonatomic) G8Tesseract *tessEng;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    if (_tessEng == nil) {
+        _tessEng = [G8Tesseract new];
+        _tessEng.language = @"eng+fra";
+        _tessEng.engineMode = G8OCREngineModeCubeOnly;
+        _tessEng.pageSegmentationMode = G8PageSegmentationModeAuto;
+        _tessEng.maximumRecognitionTime = 60.0;
+    }
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)tapMeToSnap:(id)sender
 {
-    NSLog(@"I'm available");
-    
-    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Pick up "
+    UIActionSheet *actionSheet = [[UIActionSheet alloc] initWithTitle:@"Choose The Picture !!!"
                                                              delegate:self
                                                     cancelButtonTitle:@"Cancel"
                                                destructiveButtonTitle:@"Camera"
                                                     otherButtonTitles:@"Photo",nil];
     [actionSheet showInView:self.view];
-    
 }
 
 #pragma mark --
 #pragma mark -- UIActionSheet delegate
-- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+- (void)actionSheet:(UIActionSheet *)actionSheet
+clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (_imagePickerController == nil) {
         _imagePickerController = [[UIImagePickerController alloc] init];
-        _imagePickerController.delegate = self;
+        _imagePickerController.delegate = (id)self;
         _imagePickerController.allowsEditing = YES;
     }
     switch (buttonIndex) {
@@ -58,25 +63,27 @@
                 _imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
             }
             [self presentViewController:_imagePickerController animated:YES completion:NULL];
-            NSLog(@"Camera Button Pressed");
+            //NSLog(@"Camera Button Pressed");
             break;
         case 1:
             _imagePickerController.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
             [self presentViewController:_imagePickerController animated:YES completion:NULL];
-            NSLog(@"Photo Library Pressed");
+            //NSLog(@"Photo Library Pressed");
             break;
         default:
-            NSLog(@"No Action triggered");
+            //NSLog(@"No Action triggered");
             break;
     }
 }
 
-- (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info
+- (void)imagePickerController:(UIImagePickerController *)picker
+didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
-    UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
-    _capturedImage = chosenImage;
+    _activityView.hidden = NO;
+    [_activityView startAnimating];
     [picker dismissViewControllerAnimated:YES completion:^{
-        [self processImage:_capturedImage];
+        UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
+        [self processImage:chosenImage];
     }];
 }
 
@@ -87,17 +94,14 @@
 
 - (void)processImage:(UIImage *)processImg
 {
-    G8Tesseract *tessEng = [G8Tesseract new];
-    tessEng.language = @"eng+fra";
-    tessEng.engineMode = G8OCREngineModeCubeOnly;
-    tessEng.pageSegmentationMode = G8PageSegmentationModeAuto;
-    tessEng.maximumRecognitionTime = 60.0;
-    tessEng.image = processImg.g8_blackAndWhite;
-    [tessEng recognize];
+    _tessEng.image = processImg.g8_blackAndWhite;
+    [_tessEng recognize];
+    //  NSLog(@" text ---------\n\n%@",_tessEng.recognizedText);
     
-    // 7
-    NSLog(@" text ---------\n\n%@",tessEng.recognizedText);
-    _textView.text = tessEng.recognizedText;
+    _textView.text = _tessEng.recognizedText;
     //_textView.editable = true;
+   
+    _activityView.hidden = YES;
+    [_activityView stopAnimating];
 }
 @end
